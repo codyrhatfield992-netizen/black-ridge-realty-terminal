@@ -14,9 +14,10 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-4">
       <div className="space-y-1">
-        <h1 className="text-3xl tracking-tight">Hello, Aiy</h1>
+        <h1 className="text-3xl tracking-tight">Cody Hatfield</h1>
         <p className="text-muted-foreground text-sm">
-          Monitor traffic, engagement, and conversion performance in one view.
+          Black Ridge Demo — created by Cody Hatfield to track model portfolio performance, valuation assumptions, and
+          capital strategy.
         </p>
       </div>
 

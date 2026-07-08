@@ -121,7 +121,7 @@ export function TrafficQuality() {
   return (
     <Card className="h-full">
       <CardHeader>
-        <CardTitle className="font-normal">Traffic Quality</CardTitle>
+        <CardTitle className="font-normal">Capital Quality</CardTitle>
         <CardAction>
           <Ellipsis className="size-4" />
         </CardAction>

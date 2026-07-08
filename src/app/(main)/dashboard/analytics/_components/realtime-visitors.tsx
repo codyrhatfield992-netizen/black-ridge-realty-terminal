@@ -92,7 +92,7 @@ export function RealtimeVisitors() {
   return (
     <Card className="h-full">
       <CardHeader>
-        <CardTitle className="font-normal">Realtime Visitors</CardTitle>
+        <CardTitle className="font-normal">Market Pulse</CardTitle>
         <CardAction>
           <Ellipsis className="size-4" />
         </CardAction>

@@ -3,12 +3,12 @@ import packageJson from "../../package.json";
 const currentYear = new Date().getFullYear();
 
 export const APP_CONFIG = {
-  name: "Studio Admin",
+  name: "Black Ridge Terminal",
   version: packageJson.version,
-  copyright: `© ${currentYear}, Studio Admin.`,
+  copyright: `© ${currentYear}, Black Ridge Terminal.`,
   meta: {
-    title: "Studio Admin - Modern Next.js Dashboard Starter Template",
+    title: "Black Ridge Terminal — Institutional Wealth Intelligence",
     description:
-      "Studio Admin is a modern, open-source dashboard starter template built with Next.js 16, Tailwind CSS v4, and shadcn/ui. Perfect for SaaS apps, admin panels, and internal tools—fully customizable and production-ready.",
+      "Black Ridge Terminal is a free, browser-based institutional wealth, valuation, and capital strategy command center. Model capital, risk, valuation, allocation, and scenario outcomes locally in your browser — no login, no bank connection, no data leaves your device.",
   },
 };

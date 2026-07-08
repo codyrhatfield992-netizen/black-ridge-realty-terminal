@@ -15,7 +15,7 @@ export function TopPages() {
   return (
     <Card className="h-full gap-2">
       <CardHeader>
-        <CardTitle className="font-normal">Page Performance</CardTitle>
+        <CardTitle className="font-normal">Model Performance</CardTitle>
         <CardAction>
           <Ellipsis className="size-4" />
         </CardAction>

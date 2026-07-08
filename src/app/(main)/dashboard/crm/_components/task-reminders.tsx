@@ -1,7 +1,7 @@
 import { CalendarDays, CalendarRange } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 const proposalSent = 12;
@@ -21,6 +21,9 @@ export function TaskReminders() {
       <Card className="xl:col-span-8">
         <CardHeader>
           <CardTitle>Upcoming Meetings</CardTitle>
+          <CardDescription>
+            Upcoming meetings tied to venture development, funding conversations, and project milestones.
+          </CardDescription>
           <CardAction>
             <Button variant="outline" size="sm">
               <CalendarDays data-icon="inline-start" />
@@ -58,9 +61,9 @@ export function TaskReminders() {
                   </div>
                   <div className="min-w-0">
                     <div className="truncate font-medium text-primary-foreground text-xs leading-none">
-                      Product demo with Tim
+                      EKU College of Business
                     </div>
-                    <div className="truncate text-[10px] text-primary-foreground/75">Weblabs Studio</div>
+                    <div className="truncate text-[10px] text-primary-foreground/75">TerraCloud funding review</div>
                   </div>
                 </div>
               </div>
