@@ -53,6 +53,7 @@ Open `http://localhost:3000`. The app redirects to the Realty Terminal.
 npm run db:generate
 npm run build
 npm run build:cloudflare
+npm run build:sites
 ```
 
 ## Data responsibility
