@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+import { headers } from "next/headers";
+
 import type { Metadata } from "next";
 
 import { Toaster } from "@/components/ui/sonner";
@@ -12,10 +14,29 @@ import { PreferencesStoreProvider } from "@/stores/preferences/preferences-provi
 
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: APP_CONFIG.meta.title,
-  description: APP_CONFIG.meta.description,
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const requestHeaders = await headers();
+  const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
+  const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
+  const imageUrl = `${protocol}://${host}/og.png`;
+
+  return {
+    title: APP_CONFIG.meta.title,
+    description: APP_CONFIG.meta.description,
+    openGraph: {
+      title: APP_CONFIG.meta.title,
+      description: APP_CONFIG.meta.description,
+      type: "website",
+      images: [{ url: imageUrl, width: 1732, height: 908, alt: "Black Ridge Realty Terminal" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: APP_CONFIG.meta.title,
+      description: APP_CONFIG.meta.description,
+      images: [imageUrl],
+    },
+  };
+}
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   const { theme_mode, theme_preset, content_layout, navbar_style, sidebar_variant, sidebar_collapsible, font } =

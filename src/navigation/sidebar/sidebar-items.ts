@@ -1,4 +1,4 @@
-import { Banknote, ChartBar, Gauge, Landmark, LayoutDashboard, type LucideIcon } from "lucide-react";
+import { Building2, type LucideIcon, MapPinned, UsersRound } from "lucide-react";
 
 export type NavBadge = "new" | "soon";
 
@@ -41,38 +41,26 @@ export interface NavGroup {
 export const sidebarItems: NavGroup[] = [
   {
     id: 1,
-    label: "Dashboards",
+    label: "Real Estate Operations",
     items: [
       {
-        id: "overview",
-        title: "Overview",
-        url: "/dashboard/default",
-        icon: LayoutDashboard,
-      },
-      {
-        id: "finance",
-        title: "Finance",
-        url: "/dashboard/finance",
-        icon: Banknote,
-      },
-      {
-        id: "analytics",
-        title: "Analytics",
-        url: "/dashboard/analytics",
-        icon: Gauge,
-      },
-      {
-        id: "pipeline",
-        title: "Pipeline",
-        url: "/dashboard/crm",
-        icon: ChartBar,
-      },
-      {
-        id: "terminal",
-        title: "Terminal",
-        url: "/dashboard/terminal",
-        icon: Landmark,
+        id: "realty-terminal",
+        title: "Realty Terminal",
+        url: "/dashboard/real-estate",
+        icon: Building2,
         badge: "new",
+      },
+      {
+        id: "buyers",
+        title: "Buyer Pipeline",
+        url: "/dashboard/real-estate#buyers",
+        icon: UsersRound,
+      },
+      {
+        id: "markets",
+        title: "Markets",
+        url: "/dashboard/real-estate#markets",
+        icon: MapPinned,
       },
     ],
   },
